@@ -13,4 +13,8 @@ public class SeleccionEscenario : MonoBehaviour
     public void GoMurallaChina(){
         SceneManager.LoadScene("MurallaChina_01");
     }
+
+    public void GoChichenItza(){
+        SceneManager.LoadScene("ChichenItza_01");
+    }
 }
