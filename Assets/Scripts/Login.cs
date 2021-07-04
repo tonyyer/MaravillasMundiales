@@ -13,7 +13,8 @@ public class Login : MonoBehaviour {
 	public Text responseText;
 
 
-	string authphpurl = "http://localhost/videojuego-2d/auth.php";
+	//string authphpurl = "http://localhost/videojuego-2d/auth.php";
+	string authphpurl = "http://tonyyer2.000webhostapp.com/auth.php";
 
 	public void handleLoginButtonClick(){
 		StartCoroutine(PostDataForLogin ());
