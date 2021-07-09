@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Maravillas/MurallaChina/spritesDiseño/background/background_cave.png.meta
 guid: 166769151f40bdf48a2cc745bc41db86
+=======
+guid: cff27e1a858b512498e68ca9d6cd18da
+>>>>>>> d5b081cd5cb8f53ee7df631e6e4f7edf6328ef78:Assets/Imagenes/escena01_chichenitza.jpg.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
