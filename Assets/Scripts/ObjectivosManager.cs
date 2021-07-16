@@ -3,33 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class DiamantesManager : MonoBehaviour
+public class ObjectivosManager : MonoBehaviour
 {
-    public Text levelCleared;
+    public GameObject levelCleared;
     //public Animator animator; 
 
-    public Text totalDiamantes;
-    public Text DiamantesCollected;
+    public Text totalObjetos;
+    public Text ObjetosCollected;
 
-    private int totalDiamantesInLevel;
+    private int totalObjetosInLevel;
 
     private void Start(){
-        totalDiamantesInLevel=transform.childCount;
+        totalObjetosInLevel=transform.childCount;
     }
     private void Update(){
-        AllDiamantesCollected();
-        totalDiamantes.text = totalDiamantesInLevel.ToString();
-        DiamantesCollected.text=transform.childCount.ToString();
+        AllObjetosCollected();
+        totalObjetos.text = totalObjetosInLevel.ToString();
+        ObjetosCollected.text=transform.childCount.ToString();
     }
-    public void AllDiamantesCollected(){
+    public void AllObjetosCollected(){
         if(transform.childCount == 0){
-            Debug.Log("Excelente Recolecto Todos los diamantes");
+            Debug.Log("Excelente Recolecto Todos los Objetos");
             //animator.Play("jugadorVictory");
             levelCleared.gameObject.SetActive(true);
-            Invoke("ChangeScene",1);
+            //new WaitForSeconds(6);
+
+            //Invoke("ChangeScene",1);
             
         }
     }
+
+
     void ChangeScene(){
         if(SceneManager.GetActiveScene().buildIndex < 2){
            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);

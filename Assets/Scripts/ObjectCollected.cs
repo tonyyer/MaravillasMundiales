@@ -14,7 +14,7 @@ public class ObjectCollected : MonoBehaviour
             Time.timeScale=0;
             Objeto.SetActive(false);
             GetComponent<SpriteRenderer>().enabled=false;
-            
+            Destroy(gameObject,0.5f);
         }else{
             Debug.Log("no hay colision");
         }
