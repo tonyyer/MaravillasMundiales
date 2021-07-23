@@ -21,30 +21,25 @@ public class UIManager : MonoBehaviour
         Time.timeScale=0;
         optionsPanel.SetActive(true);
     }
-    public void Return(){
+    public void Jugar(){
          Time.timeScale=1;
         optionsPanel.SetActive(false);       
     }
-    public void AnotherOptions(){
-        SceneManager.LoadScene("Niveles");
+    public void Menu(){
+        SceneManager.LoadScene("Menu");
     }
 
-    public void GoMainMenu(){
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void GoMainNiveles(){
-        SceneManager.LoadScene("Niveles");
+    public void Configuracion(){
+        SceneManager.LoadScene("Config");
     }
 
-    public void Retornar(){
-        SceneManager.LoadScene("SampleScene");
-    }
-
-    public void QuitGame(){
+    public void Salir(){
         //Application.Quit();
-        SceneManager.LoadScene("EmailAuth");
+        SceneManager.LoadScene("Login");
     }
 
- 
+     public void Restart(){
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 }

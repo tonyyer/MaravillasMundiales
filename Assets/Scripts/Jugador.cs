@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class Jugador : MonoBehaviour
 {
     public float runSpeed = 4;
@@ -14,6 +14,8 @@ public class Jugador : MonoBehaviour
 
     public Animator animator;
 
+
+    public AudioSource AudioJump;
    // public GameObject Panel;
     void Start()
     {
@@ -21,22 +23,28 @@ public class Jugador : MonoBehaviour
     } 
 
     void FixedUpdate(){
-        if(Input.GetKey("d") || Input.GetKey("right")){
+        
+
+        if(Input.GetKey("d") || Input.GetKey("right") ){
             rb2D.velocity = new Vector2(runSpeed,rb2D.velocity.y);
             spriteRenderer.flipX=false;
             animator.SetBool("Run",true);
+            
+            
             
         }else if(Input.GetKey("a") || Input.GetKey("left")){
             rb2D.velocity = new Vector2(-runSpeed,rb2D.velocity.y);
             spriteRenderer.flipX=true;
             animator.SetBool("Run",true);
+
+            //AudioJump.Play();
         }else{
             rb2D.velocity = new Vector2(0,rb2D.velocity.y);
             animator.SetBool("Run",false);
         }
         if(Input.GetKey("space") && CheckGround.isGrounded){
             rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
-        
+        AudioJump.Play();
         }
 
         if(CheckGround.isGrounded==false){
@@ -62,6 +70,7 @@ public class Jugador : MonoBehaviour
             Debug.Log("Encontro un Objeto");
            // Panel.SetActive(true);
         }
+        
     }
     
 
