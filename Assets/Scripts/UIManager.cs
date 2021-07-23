@@ -38,6 +38,8 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Login");
     }
 
- 
+     public void Restart(){
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 }
