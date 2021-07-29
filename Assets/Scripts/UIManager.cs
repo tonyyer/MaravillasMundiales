@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void Configuracion(){
-        SceneManager.LoadScene("Config");
+        SceneManager.LoadScene("Configuracion");
     }
 
     public void Salir(){
