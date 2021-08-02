@@ -12,7 +12,7 @@ public class ObjectivosManager : MonoBehaviour
     public Text ObjetosCollected;
 
     private int totalObjetosInLevel;
-
+    public JugadorRespawn DJugador;
     private void Start(){
         totalObjetosInLevel=transform.childCount;
     }
@@ -26,6 +26,8 @@ public class ObjectivosManager : MonoBehaviour
             Debug.Log("Excelente Recolecto Todos los Objetos");
             //animator.Play("jugadorVictory");
             levelCleared.gameObject.SetActive(true);
+           // GameObject obj = new JugadorRespawn();
+            DJugador.DisabledJugador();
             //new WaitForSeconds(6);
 
             //Invoke("ChangeScene",1);
