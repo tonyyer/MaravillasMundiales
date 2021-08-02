@@ -41,5 +41,6 @@ public class JugadorRespawn : MonoBehaviour
     }
     public void DisabledJugador(){
         GetComponent<Jugador>().enabled=false;
+        GetComponent<PlayerMoveJoystick>().enabled=false;
     }
 }
