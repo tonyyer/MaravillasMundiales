@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
-    public GameObject optionsPanel;
+    public GameObject optionsPanel=null;
 
 
     void Start()
@@ -43,6 +43,10 @@ public class UIManager : MonoBehaviour
 
      public void Restart(){
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Exit(){
+        Application.Quit();
     }
 
 }
